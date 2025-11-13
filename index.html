@@ -1,77 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lakshya Singhal | AQI Project Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lakshya Singhal — Portfolio</title>
+  <meta name="theme-color" content="#140B2D" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Lakshya Singhal</h1>
-      <p class="tagline">Crafting intelligent systems with Python & MySQL</p>
-    </div>
+  <header class="nav-hero">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand"><a href="#home">Lakshya</a></div>
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" aria-pressed="false" title="Toggle theme">🌓</button></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Lakshya Singhal</h1>
+        <p class="tagline">Building intelligent systems with Python & MySQL</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn outline" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+      </div>
+    </section>
   </header>
 
   <main>
-    <section id="about">
+    <!-- ABOUT -->
+    <section id="about" class="section container">
       <h2>About Me</h2>
-      <div class="project-card">
-      <p>I’m a B.Tech engineering student (2028) with a strong foundation 
-          in backend development using MySQL and Python.I focus on building 
-          scalable systems and integrating real-time data into clean, responsive  
-          web-interfaces — always with clarity and performance in mind.</p>
-      </div>
+      <p class="lead">
+        I’m a B.Tech student (batch 2028) focused on backend development using Python, Flask and MySQL.
+      </p>
     </section>
 
-    <section id="projects">
-      <h2>My Project</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <h3>Air quality monitoring system</h3>
-          <p>Real-time air quality monitoring using multiple sensor inputs. Built with Python and Flask, designed for clarity and responsiveness.</p>
-          <ul>
-            <li> Live AQI readings</li>
-            <li> Sensor integration</li>
-            <li> Web dashboard interface</li>
-          </ul>
-        </div>
-         <div class="project-card">
-      <h3>Smart Disaster Agent</h3>
-      <p>An intelligent web-based assistant designed to respond to disaster scenarios using rule-based logic and alert systems. Built with Python and HTML/CSS.</p>
-      <ul>
-        <li> Emergency response simulation</li>
-        <li> Real-time alert triggers</li>
-        <li> Decision-making logic</li>
-      </ul>
-    </div>
-  </div>
-</section>
+        <article class="project-card">
+          <h3>Air Quality Monitoring System</h3>
+          <p>Backend + dashboard with live sensor integration using Flask.</p>
+          <div class="card-actions">
+            <a class="btn" href="https://github.com/lakshyasinghal08/aqi" target="_blank" rel="noopener">Source</a>
+            <a class="btn outline" href="#" data-project="aqi">Details</a>
+          </div>
+        </article>
 
+        <article class="project-card">
+          <h3>Smart Disaster Agent</h3>
+          <p>Rule-based emergency-response chatbot with alert triggers.</p>
+          <div class="card-actions">
+            <a class="btn" href="https://github.com/lakshyasinghal08/disaster-agent" target="_blank" rel="noopener">Source</a>
+            <a class="btn outline" href="#" data-project="disaster">Details</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="interests">
-      <h2>My Interests</h2>
-      <div class="project-card">
-      <ul>
-        <li>Backend Architecture and API Design</li>
-        <li>Machine Learning and Model Optimization</li>
-        <li>Python Libraries: NumPy, Pandas, Flask</li>
-        <li>Real-time data dashboards (like my AQI project)</li>
-        <li>Exam logistics and documentation compliance</li>
-      </ul>
+    <!-- SKILLS (compact cards: only skill name + small subheading) -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+
+      <div class="skill-grid">
+        <!-- Python (subheading: NumPy) -->
+        <article class="skill-card">
+          <div class="skill-title">
+            <h3>Python</h3>
+            <div class="skill-sub">NumPy</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn outline" href="#" data-skill="python">Details</a>
+          </div>
+        </article>
+
+        <!-- SQL / MySQL -->
+        <article class="skill-card">
+          <div class="skill-title">
+            <h3>SQL / MySQL</h3>
+            <div class="skill-sub">Queries • Joins</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn outline" href="#" data-skill="sql">Details</a>
+          </div>
+        </article>
+
+        <!-- Flask / APIs -->
+        <article class="skill-card">
+          <div class="skill-title">
+            <h3>Flask / APIs</h3>
+            <div class="skill-sub">REST • Routing</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn outline" href="#" data-skill="flask">Details</a>
+          </div>
+        </article>
+
+        <!-- C++ -->
+        <article class="skill-card">
+          <div class="skill-title">
+            <h3>C++</h3>
+            <div class="skill-sub">DSA • Basics</div>
+          </div>
+          <div class="card-actions">
+            <a class="btn outline" href="#" data-skill="cpp">Details</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="contact">
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:singhallakshya30@gmail.com">singhallakshya30@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/lakshyasinghal08" target="_blank">github.com/lakshyasinghal08</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/lakshya-singhal-8a9551321" target="_blank">linkedin.com/in/lakshya-singhal</a></p>
+      <p>GitHub: <a href="https://github.com/lakshyasinghal08" target="_blank" rel="noopener">github.com/lakshyasinghal08</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/lakshya-singhal-8a9551321" target="_blank" rel="noopener">linkedin.com/in/lakshya-singhal</a></p>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Lakshya Singhal </p>
+  </footer>
+
+  <!-- Modal for project & skill details -->
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

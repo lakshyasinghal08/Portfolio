@@ -1,144 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lakshya Singhal — Portfolio</title>
-  <meta name="theme-color" content="#140B2D" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakshya Singhal — Data Analyst Portfolio</title>
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="nav-hero">
-    <nav class="nav" aria-label="Main navigation">
-      <div class="brand"><a href="#home">Lakshya</a></div>
-      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <ul id="nav-links" class="nav-links">
+
+  <!-- NAVBAR -->
+  <div class="nav-wrapper">
+    <div class="nav reveal">
+
+      <!-- Logo Section -->
+      <div class="brand-logo">
+        <img src="https://avatars.githubusercontent.com/u/000000?v=4" alt="Lakshya Logo" />
+        <div class="brand">Lakshya</div>
+      </div>
+
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="theme-toggle" aria-pressed="false" title="Toggle theme">🌓</button></li>
       </ul>
-    </nav>
 
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Lakshya Singhal</h1>
-        <p class="tagline">Building intelligent systems with Python & MySQL</p>
-        <div class="hero-ctas">
-          <a class="btn primary" href="#projects">See Projects</a>
-          <a class="btn outline" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-        </div>
-      </div>
-    </section>
-  </header>
-
-  <main>
-    <!-- ABOUT -->
-    <section id="about" class="section container">
-      <h2>About Me</h2>
-      <p class="lead">
-        I’m a B.Tech student (batch 2028) focused on backend development using Python, Flask and MySQL.
-      </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Air Quality Monitoring System</h3>
-          <p>Backend + dashboard with live sensor integration using Flask.</p>
-          <div class="card-actions">
-            <a class="btn" href="https://github.com/lakshyasinghal08/aqi" target="_blank" rel="noopener">Source</a>
-            <a class="btn outline" href="#" data-project="aqi">Details</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <h3>Smart Disaster Agent</h3>
-          <p>Rule-based emergency-response chatbot with alert triggers.</p>
-          <div class="card-actions">
-            <a class="btn" href="https://github.com/lakshyasinghal08/disaster-agent" target="_blank" rel="noopener">Source</a>
-            <a class="btn outline" href="#" data-project="disaster">Details</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SKILLS (compact cards: only skill name + small subheading) -->
-    <section id="skills" class="section container">
-      <h2>Skills</h2>
-
-      <div class="skill-grid">
-        <!-- Python (subheading: NumPy) -->
-        <article class="skill-card">
-          <div class="skill-title">
-            <h3>Python</h3>
-            <div class="skill-sub">NumPy</div>
-          </div>
-          <div class="card-actions">
-            <a class="btn outline" href="#" data-skill="python">Details</a>
-          </div>
-        </article>
-
-        <!-- SQL / MySQL -->
-        <article class="skill-card">
-          <div class="skill-title">
-            <h3>SQL / MySQL</h3>
-            <div class="skill-sub">Queries • Joins</div>
-          </div>
-          <div class="card-actions">
-            <a class="btn outline" href="#" data-skill="sql">Details</a>
-          </div>
-        </article>
-
-        <!-- Flask / APIs -->
-        <article class="skill-card">
-          <div class="skill-title">
-            <h3>Flask / APIs</h3>
-            <div class="skill-sub">REST • Routing</div>
-          </div>
-          <div class="card-actions">
-            <a class="btn outline" href="#" data-skill="flask">Details</a>
-          </div>
-        </article>
-
-        <!-- C++ -->
-        <article class="skill-card">
-          <div class="skill-title">
-            <h3>C++</h3>
-            <div class="skill-sub">DSA • Basics</div>
-          </div>
-          <div class="card-actions">
-            <a class="btn outline" href="#" data-skill="cpp">Details</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:singhallakshya30@gmail.com">singhallakshya30@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/lakshyasinghal08" target="_blank" rel="noopener">github.com/lakshyasinghal08</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/lakshya-singhal-8a9551321" target="_blank" rel="noopener">linkedin.com/in/lakshya-singhal</a></p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Lakshya Singhal </p>
-  </footer>
-
-  <!-- Modal for project & skill details -->
-  <div id="project-modal" class="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true">
-      <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
-      <div id="modal-body"></div>
     </div>
   </div>
 
+  <!-- HERO SECTION -->
+  <div class="hero reveal">
+    <h1 id="typing"></h1>
+    <p class="tagline">Data Analyst • SQL • Python • Excel • Data Visualization</p>
+    <a class="btn-primary" href="#projects">Explore My Work</a>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>
+      I am Lakshya Singhal, an aspiring <strong>Data Analyst</strong> skilled in Python, SQL,
+      Excel, and visualization. I enjoy transforming raw datasets into meaningful
+      insights and dashboards.
+    </p>
+  </section>
+
+  <!-- PROJECTS (Only AQI Project) -->
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>Air Quality Monitoring (AQI)</h3>
+        <p>
+         Made an AQI project using PM2.5, PM10, humidity, and temperature sensors to monitor air quality.
+It demonstrates how different environmental sensors work together to measure surrounding conditions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-pill">Python</div>
+      <div class="skill-pill">SQL</div>
+      <div class="skill-pill">Excel</div>
+      <div class="skill-pill">NumPy</div>
+      <div class="skill-pill">Data Cleaning</div>
+      <div class="skill-pill">Visualization</div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION WITH REAL ICON LINKS -->
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+
+
+    <div style="display:flex; gap:25px; margin-top:20px; align-items:center;">
+
+      <!-- GitHub -->
+      <a href="https://github.com/lakshyasinghal08" target="_blank">
+        <img 
+          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
+          alt="GitHub Logo" 
+          width="55"
+        />
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/lakshya-singhal-8a9551321" target="_blank">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+          alt="LinkedIn Logo" 
+          width="55"
+        />
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:singhallakshya30@gmail.com">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" 
+          alt="Email Logo" 
+          width="55"
+        />
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Lakshya Singhal — Data Analyst Portfolio
+  </footer>
+
+  <!-- External JavaScript -->
   <script src="script.js"></script>
+
 </body>
 </html>

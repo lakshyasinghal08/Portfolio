@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lakshya Singhal — Data Analyst Portfolio</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,113 +17,254 @@
 <body>
 
   <!-- NAVBAR -->
-  <div class="nav-wrapper">
-    <div class="nav reveal">
-
+  <header class="nav-wrapper">
+    <nav class="nav">
       <!-- Logo Section -->
-      <div class="brand-logo">
+      <a class="brand-logo" href="#top" aria-label="Go to top">
         <img src="https://avatars.githubusercontent.com/u/000000?v=4" alt="Lakshya Logo" />
-        <div class="brand">Lakshya</div>
-      </div>
+        <div class="brand">
+          <span class="brand-name">Lakshya</span>
+          <span class="brand-role">Data Analyst</span>
+        </div>
+      </a>
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
 
-    </div>
-  </div>
+      <!-- Mobile Toggle -->
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
 
   <!-- HERO SECTION -->
-  <div class="hero reveal">
-    <h1 id="typing"></h1>
-    <p class="tagline">Data Analyst • SQL • Python • Excel • Data Visualization</p>
-    <a class="btn-primary" href="#projects">Explore My Work</a>
-  </div>
+  <main id="top">
+    <section class="hero reveal">
+      <div class="hero-left">
+        <p class="hero-badge">Engineering Student @ AI & DS (2028)</p>
 
-  <!-- ABOUT -->
-  <section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>
-      I am Lakshya Singhal, an aspiring <strong>Data Analyst</strong> skilled in Python, SQL,
-      Excel, and visualization. I enjoy transforming raw datasets into meaningful
-      insights and dashboards.
-    </p>
-  </section>
+        <h1 id="typing" class="hero-title"></h1>
 
-  <!-- PROJECTS (Only AQI Project) -->
-  <section id="projects" class="reveal">
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <h3>Air Quality Monitoring (AQI)</h3>
-        <p>
-         Made an AQI project using PM2.5, PM10, humidity, and temperature sensors to monitor air quality.
-It demonstrates how different environmental sensors work together to measure surrounding conditions.
+        <p class="tagline">
+          Aspiring <strong>Data Analyst</strong> skilled in <strong>SQL</strong>, <strong>NoSQL</strong>,
+          <strong>Python</strong>, <strong>Excel</strong> & Data Visualization.
         </p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#projects">Explore My Work</a>
+          <a class="btn-secondary" href="#contact">Let’s Connect</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <div class="metric-num">SQL</div>
+            <div class="metric-text">Queries • Joins • Aggregations</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">Python</div>
+            <div class="metric-text">Pandas • EDA • Visualization</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">Excel</div>
+            <div class="metric-text">Dashboards • Pivot Tables</div>
+          </div>
+        </div>
       </div>
 
-    </div>
-  </section>
+      <div class="hero-right">
+        <div class="profile-card">
+          <div class="profile-top">
+            <img class="profile-img" src="https://avatars.githubusercontent.com/u/000000?v=4" alt="Lakshya profile" />
+            <div>
+              <h3 class="profile-name">Lakshya Singhal</h3>
+              <p class="profile-sub">Aspiring Data Analyst</p>
+            </div>
+          </div>
 
-  <!-- SKILLS -->
-  <section id="skills" class="reveal">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-pill">Python</div>
-      <div class="skill-pill">SQL</div>
-      <div class="skill-pill">Excel</div>
-      <div class="skill-pill">NumPy</div>
-      <div class="skill-pill">Data Cleaning</div>
-      <div class="skill-pill">Visualization</div>
-    </div>
-  </section>
+          <div class="profile-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">NoSQL</span>
+            <span class="tag">Python</span>
+            <span class="tag">Excel</span>
+          </div>
 
-  <!-- CONTACT SECTION WITH REAL ICON LINKS -->
-  <section id="contact" class="reveal">
-    <h2>Contact</h2>
+          <div class="profile-links">
+            <a class="icon-link" href="https://github.com/lakshyasinghal08" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a class="icon-link" href="https://linkedin.com/in/lakshya-singhal-8a9551321" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            <a class="icon-link" href="mailto:singhallakshya30@gmail.com">
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <h2>About Me</h2>
 
-    <div style="display:flex; gap:25px; margin-top:20px; align-items:center;">
+      <p class="section-lead">
+        I’m Lakshya Singhal, an Engineering student specializing in <strong>AI & Data Science (2028)</strong>
+        and an aspiring <strong>Data Analyst</strong>. I enjoy working with datasets, identifying patterns,
+        and converting raw data into useful business insights.
+      </p>
 
-      <!-- GitHub -->
-      <a href="https://github.com/lakshyasinghal08" target="_blank">
-        <img 
-          src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-          alt="GitHub Logo" 
-          width="55"
-        />
-      </a>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>What I do</h3>
+          <p>
+            I perform end-to-end analysis: cleaning data, doing EDA, writing SQL queries, and creating
+            dashboards/reports that make results easy to understand.
+          </p>
+        </div>
 
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/lakshya-singhal-8a9551321" target="_blank">
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
-          alt="LinkedIn Logo" 
-          width="55"
-        />
-      </a>
+        <div class="about-card">
+          <h3>What I'm learning</h3>
+          <p>
+            Improving skills in Python analytics, database concepts (SQL & NoSQL), and visualization so I can
+            work on real business problems.
+          </p>
+        </div>
 
-      <!-- Email -->
-      <a href="mailto:singhallakshya30@gmail.com">
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" 
-          alt="Email Logo" 
-          width="55"
-        />
-      </a>
+        <div class="about-card">
+          <h3>My goal</h3>
+          <p>
+            Build a strong analytics portfolio and gain internship opportunities where I can grow into a
+            professional Data Analyst.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">A few projects that show my practical skills in analytics and problem-solving.</p>
+      </div>
 
-  <!-- FOOTER -->
-  <footer>
-    © <span id="year"></span> Lakshya Singhal — Data Analyst Portfolio
-  </footer>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-top">
+            <h3>Air Quality Monitoring (AQI)</h3>
+            <span class="project-badge">Sensors + Analysis</span>
+          </div>
+
+          <p>
+            AQI monitoring project using PM2.5, PM10, humidity, and temperature sensors to track air quality.
+            Demonstrates how multiple environmental sensors work together to measure conditions.
+          </p>
+
+          <div class="project-stats">
+            <span class="chip">PM2.5</span>
+            <span class="chip">PM10</span>
+            <span class="chip">Humidity</span>
+            <span class="chip">Temperature</span>
+          </div>
+
+          <div class="project-actions">
+            <!-- Put real links later -->
+            <a class="btn-small" href="#" aria-disabled="true">GitHub</a>
+            <a class="btn-small outline" href="#" aria-disabled="true">Live</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <h3>E-commerce Sales Analysis</h3>
+            <span class="project-badge accent">In Progress</span>
+          </div>
+
+          <p>
+            An analytics project to explore revenue trends, best-selling categories, customer behavior,
+            and profitability using SQL + Python + Excel.
+          </p>
+
+          <div class="project-stats">
+            <span class="chip">SQL</span>
+            <span class="chip">Python</span>
+            <span class="chip">Excel</span>
+            <span class="chip">Dashboard</span>
+          </div>
+
+          <div class="project-actions">
+            <a class="btn-small" href="#" aria-disabled="true">GitHub</a>
+            <a class="btn-small outline" href="#" aria-disabled="true">Report</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <h2>Skills</h2>
+      <p class="section-lead">
+        My core technical skills for data analytics and reporting.
+      </p>
+
+      <div class="skills-wrap">
+        <div class="skill-group">
+          <h3>Data Tools</h3>
+          <div class="skills-grid">
+            <div class="skill-pill">Excel (Pivot Tables, Dashboard)</div>
+            <div class="skill-pill">Data Cleaning</div>
+            <div class="skill-pill">EDA (Exploratory Data Analysis)</div>
+            <div class="skill-pill">Report Building</div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Programming & Databases</h3>
+          <div class="skills-grid">
+            <div class="skill-pill">Python (Pandas, NumPy)</div>
+            <div class="skill-pill">SQL (Joins, Aggregation)</div>
+            <div class="skill-pill">NoSQL (Basics)</div>
+            <div class="skill-pill">Data Visualization</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+      <p class="section-lead">
+        Want to collaborate, give feedback, or discuss internships/projects? Let’s connect.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="https://github.com/lakshyasinghal08" target="_blank" rel="noreferrer">
+          <div class="contact-title">GitHub</div>
+          <div class="contact-sub">See my projects & code</div>
+        </a>
+
+        <a class="contact-card" href="https://linkedin.com/in/lakshya-singhal-8a9551321" target="_blank" rel="noreferrer">
+          <div class="contact-title">LinkedIn</div>
+          <div class="contact-sub">Connect professionally</div>
+        </a>
+
+        <a class="contact-card" href="mailto:singhallakshya30@gmail.com">
+          <div class="contact-title">Email</div>
+          <div class="contact-sub">singhallakshya30@gmail.com</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      © <span id="year"></span> Lakshya Singhal — Data Analyst Portfolio
+    </footer>
+  </main>
 
   <!-- External JavaScript -->
   <script src="script.js"></script>

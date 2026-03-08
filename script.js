@@ -1,55 +1,47 @@
-// ================= Pro Portfolio JavaScript =================
+document.getElementById("year").textContent = new Date().getFullYear()
 
-document.addEventListener("DOMContentLoaded", () => {
-  // YEAR UPDATE
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+const text = "Lakshya Singhal"
 
-  // TYPING EFFECT
-  const typingEl = document.getElementById("typing");
-  const text = "Hi, I'm Lakshya — Aspiring Data Analyst";
-  let index = 0;
+let i = 0
 
-  function typeEffect() {
-    if (!typingEl) return;
-    typingEl.textContent = text.slice(0, index++);
-    if (index <= text.length) setTimeout(typeEffect, 55);
-  }
-  typeEffect();
+function typing(){
 
-  // SCROLL REVEAL EFFECT
-  const revealElements = document.querySelectorAll(".reveal");
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
+if(i < text.length){
 
-    revealElements.forEach((el) => {
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 80) {
-        el.classList.add("revealed");
-      }
-    });
-  }
+document.getElementById("typing").innerHTML += text.charAt(i)
 
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
+i++
 
-  // MOBILE MENU
-  const menuBtn = document.getElementById("menuBtn");
-  const navLinks = document.getElementById("navLinks");
+setTimeout(typing,80)
 
-  if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-      const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-      menuBtn.setAttribute("aria-expanded", String(!expanded));
-    });
+}
 
-    // Close menu when clicking a link
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-});
+}
+
+typing()
+
+const starsContainer = document.querySelector(".stars");
+
+for(let i=0;i<80;i++){
+
+const star = document.createElement("div");
+
+star.classList.add("star");
+
+star.style.left = Math.random()*100 + "vw";
+
+star.style.animationDuration = (Math.random()*5 + 5) + "s";
+
+star.style.animationDelay = Math.random()*5 + "s";
+
+starsContainer.appendChild(star);
+
+}
+const glow = document.querySelector(".cursor-glow")
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left = e.clientX + "px"
+glow.style.top = e.clientY + "px"
+
+})

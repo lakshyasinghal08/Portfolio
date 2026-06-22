@@ -1,4 +1,4 @@
-/* ================= NAVBAR SCROLL ================= */
+/* ================= NAVBAR SHADOW ================= */
 
 window.addEventListener("scroll", () => {
 
@@ -16,9 +16,7 @@ navbar.classList.remove("navbar-scrolled");
 
 });
 
-/* ================= SECTION REVEAL ================= */
-
-const sections = document.querySelectorAll(".section");
+/* ================= FADE IN ON SCROLL ================= */
 
 const observer = new IntersectionObserver((entries)=>{
 
@@ -36,15 +34,20 @@ entry.target.classList.add("show");
 threshold:0.15
 });
 
-sections.forEach((section)=>{
+document.querySelectorAll(
+".section,.skill-card,.project-card,.cert-card,.learning-card,.competency-card"
+).forEach((el)=>{
 
-section.classList.add("hidden");
+el.classList.add("hidden");
 
-observer.observe(section);
+observer.observe(el);
 
 });
 
 /* ================= ACTIVE NAV LINK ================= */
+
+const sections =
+document.querySelectorAll("section");
 
 const navLinks =
 document.querySelectorAll(".nav-links a");
@@ -82,9 +85,55 @@ link.classList.add("active");
 
 });
 
-/* ================= YEAR ================= */
+/* ================= TILT EFFECT ================= */
 
-const footer = document.querySelector("footer");
+const cards = document.querySelectorAll(
+".skill-card,.project-card,.learning-card,.competency-card"
+);
 
-footer.innerHTML =
+cards.forEach((card)=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect =
+card.getBoundingClientRect();
+
+const x =
+e.clientX - rect.left;
+
+const y =
+e.clientY - rect.top;
+
+const centerX =
+rect.width / 2;
+
+const centerY =
+rect.height / 2;
+
+const rotateX =
+((y - centerY) / 25);
+
+const rotateY =
+((centerX - x) / 25);
+
+card.style.transform =
+`perspective(1000px)
+rotateX(${rotateX}deg)
+rotateY(${rotateY}deg)
+translateY(-5px)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform =
+"perspective(1000px) rotateX(0) rotateY(0)";
+
+});
+
+});
+
+/* ================= FOOTER YEAR ================= */
+
+document.querySelector("footer").innerHTML =
 `© ${new Date().getFullYear()} Lakshya Singhal`;
